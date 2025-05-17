@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Pokédex</title>
-  <link rel="stylesheet" href="styles.css">
+    <!-- Définition du jeu de caractères utilisé -->
+    <meta charset="UTF-8">
+    <!-- Configuration pour un affichage responsive sur tous types d'écrans -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de l'onglet dans le navigateur -->
+    <title>Mini Pokédex</title>
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Titre principal de la page -->
 <h1>Mini Pokédex</h1>
 
-<!-- Menu de recherche, filtrage, et tri -->
+<!-- Menu de recherche, filtrage et tri des Pokémons -->
 <div class="search-menu">
-  <!-- Champ de recherche -->
-  <input type="text" id="search-bar" placeholder="Rechercher un Pokémon par nom...">
-  <!-- Liste déroulante pour filtrer par type -->
-  <select id="type-filter">
-    <option value="">Tous les types</option>
-    <option value="Électrique">Électrique</option>
-    <option value="Plante">Plante</option>
-    <option value="Poison">Poison</option>
-    <option value="Feu">Feu</option>
-    <option value="Eau">Eau</option>
-    <option value="Normal">Normal</option>
-    <option value="Fée">Fée</option>
-    <option value="Spectre">Spectre</option>
-    <option value="Combat">Combat</option>
-    <option value="Vol">Vol</option>
-    <option value="Glace">Glace</option>
-    <option value="Roche">Roche</option>
-    <option value="Sol">Sol</option>
-    <option value="Psy">Psy</option>
-  </select>
-  <!-- Liste déroulante pour trier les Pokémons -->
-  <select id="sort-order">
-    <option value="name-asc">Nom (A-Z)</option>
-    <option value="name-desc">Nom (Z-A)</option>
-    <option value="level-asc">Niveau (croissant)</option>
-    <option value="level-desc">Niveau (décroissant)</option>
-  </select>
+    <!-- Champ de recherche textuel pour filtrer les Pokémons par nom -->
+    <input type="text" id="search-bar" placeholder="Rechercher un Pokémon par nom...">
+
+    <!-- Menu déroulant pour filtrer les Pokémons selon leur type -->
+    <select id="type-filter">
+        <option value="">Tous les types</option>
+        <!-- Options de types de Pokémons -->
+        <option value="Électrique">Électrique</option>
+        <option value="Plante">Plante</option>
+        <option value="Poison">Poison</option>
+        <option value="Feu">Feu</option>
+        <option value="Eau">Eau</option>
+        <option value="Normal">Normal</option>
+        <option value="Fée">Fée</option>
+        <option value="Spectre">Spectre</option>
+        <option value="Combat">Combat</option>
+        <option value="Vol">Vol</option>
+        <option value="Glace">Glace</option>
+        <option value="Roche">Roche</option>
+        <option value="Sol">Sol</option>
+        <option value="Psy">Psy</option>
+    </select>
+
+    <!-- Menu déroulant pour trier les Pokémons selon leur nom ou niveau -->
+    <select id="sort-order">
+        <option value="name-asc">Nom (A-Z)</option>
+        <option value="name-desc">Nom (Z-A)</option>
+        <option value="level-asc">Niveau (croissant)</option>
+        <option value="level-desc">Niveau (décroissant)</option>
+    </select>
 </div>
 
-<!-- Conteneur pour les cartes Pokémon -->
+<!-- Conteneur principal pour afficher dynamiquement les cartes Pokémon -->
 <div class="pokemon-container">
-  <!-- Les cartes Pokémon apparaîtront ici -->
+    <!-- Les cartes Pokémon générées par JavaScript apparaîtront ici -->
 </div>
 
+<!-- Inclusion du fichier JavaScript pour gérer les interactions et affichages dynamiques -->
 <script src="script.js"></script>
 </body>
 </html>
